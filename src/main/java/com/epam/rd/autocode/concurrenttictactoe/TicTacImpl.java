@@ -14,12 +14,12 @@ public class TicTacImpl implements TicTacToe {
 
     @Override
     public void setMark(int x, int y, char mark) {
-        lastMark = mark;
         if (table[x][y] == ' ') {
             table[x][y] = mark;
         } else {
             throw new IllegalArgumentException("Cannot set mark twice");
         }
+        lastMark = mark;
     }
 
     @Override
